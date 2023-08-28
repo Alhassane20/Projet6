@@ -1,0 +1,194 @@
+$main-color: #FF6060
+ 
+#slideBlock
+    margin-top: 70px
+    display: flex
+    margin-left: auto
+    margin-right: auto
+// Masquer tous les éléments de la div slideBlocks
+#slideBlocks > div
+  display: none
+
+// Afficher le premier élément de la div
+#slideBlocks > div:first-child 
+  display: block
+
+#block-2, #block-3, #block-4, #block-5
+    margin-right: 120px
+    margin-left: 100px
+
+/* Masquer toutes les images par défaut */
+#pictures .autre-image 
+  display: none
+
+#pictures
+    text-align: center
+    position: relative
+
+#block-1 
+  position: relative
+
+.image-container 
+  position: relative
+  display: inline-block
+
+.image-container i 
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+  font-size: 24px
+  color: white
+  cursor: pointer
+
+.image-container i.flecheGauche 
+  left: 5px
+  font-size: 100px
+
+.image-container i.flecheDroite 
+  right: 5px
+  font-size: 100px
+
+
+#block-2
+    display: flex
+    justify-content: space-between
+    height: 51px
+    margin-top: 25px
+
+#block-2bis, #block-4bis
+    display: flex
+    flex-direction: row
+#name
+    margin-right: 15px
+    margin-top: 20px
+#name, #ville, #title
+    color: $main-color
+#title
+    font-size: 36px
+#name, #ville
+    font-size: 18px
+#picture
+    width: 64px
+    height: 64px
+    border-radius: 50%
+
+.color-red
+  color: #FF6060
+
+.color-grey
+  color: #E3E3E3
+
+#block-4
+    display: flex
+    justify-content: space-between
+    margin-top: 30px
+#block-4bis
+    column-gap: 10px
+#description, #equipments
+    background-color: $main-color
+.tag 
+  display: inline-block
+
+.tag:nth-child(1), .tag:nth-child(2), .tag:nth-child(3), #arrondissement
+  background-color: $main-color 
+  border-radius: 10px
+  color: white
+  padding: 5px 10px
+.tag:nth-child(1), .tag:nth-child(2)
+    margin-right: 10px
+#arrondissement, #description
+    font-size: 14px
+#block-5
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    margin-top: 35px
+    margin-bottom: 45px
+
+#descriptionBlock, #equipmentsBlock
+  width: 45%
+
+#description, #equipments
+    border-radius: 15px
+    height: 42px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding-left: 10px
+    padding-right: 20px
+    color: white
+    font-size: 18px
+    padding-top: 10px
+    padding-bottom: 10px
+    font-weight: 500
+#ParagrapheDescription, #ParagrapheEquipments
+    display: none
+    background-color: #F6F6F6
+    color: #FF6060
+    margin: 0
+    padding: 15px
+    font-size: 18px
+    border-radius: 4px
+    
+#responsive
+  display: none
+
+.color-grey
+  color: gray 
+
+@media screen and (max-width: 375px)
+  .image-container img
+    width: 90%
+
+  #block-2, #block-3, #block-4, #block-5
+    margin-right: 0
+    margin-left: 20px
+
+  #responsive
+    margin-left: 20px
+    margin-right: 20px
+    margin-top: 15px
+
+  #rating, #name, #picture
+    display: none
+  
+  #ratingBis
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+
+  #responsiveBis
+    display: flex
+    flex-direction: row
+
+  #nameBis
+    margin-right: 10px
+    margin-top: 6px
+
+  #pictureBis
+    width: 34px
+    height: 34px
+    border-radius: 50%
+
+  #etoiles
+    font-size: 12px
+
+  #block-5
+    display: flex
+    flex-direction: column
+    row-gap: 20px
+
+  #descriptionBlock, #equipmentsBlock
+    width: 90%
+
+  #description, #equipments
+    padding: 5px
+    font-size: 12px
+
+.image-container i.flecheGauche 
+  font-size: 40px
+  left: 20px
+
+.image-container i.flecheDroite 
+  font-size: 40px
+  right: 20px

@@ -1,0 +1,62 @@
+nav
+    display: flex
+    justify-content: space-between
+
+#logo
+    display: flex
+    margin-top: 45px
+    column-gap: 10px
+    margin-left: 100px
+.headerImage
+    align-self: flex-end
+.headerImage:nth-child(2)
+    width: 46px
+    height: 53px
+
+.headerImage:nth-child(3)
+    width: 39px
+    height: 48px
+
+.headerImage:nth-child(4)
+    width: 40px
+    height: 48px
+
+
+#liens
+      display: flex
+      margin-top: 62px
+      column-gap: 57px
+      margin-right: 100px
+
+a
+    text-decoration: none
+    color: #FF6060
+    font-size: 24px
+
+a:hover
+    text-decoration: underline #FF6060
+
+@media screen and (max-width: 375px)
+    #logo
+        margin-left: 20px
+        column-gap: 3px
+
+    .headerImage:nth-child(1)
+        width: 37px
+        height: 42px
+    .headerImage:nth-child(2)
+        width: 31px
+        height: 36px
+    .headerImage:nth-child(3)
+        width: 27px
+        height: 33px
+    .headerImage:nth-child(4)
+        width: 28px
+        height: 33px
+
+    #liens
+        margin-right: 10px
+        column-gap: 20px
+
+    #liens a 
+        font-size: 12px

@@ -1,0 +1,25 @@
+#bannerImage
+    background-image: url('../images/banner2.png')
+    width: 1240px
+    height: 223px
+    display: flex
+    margin-right: auto
+    margin-left: auto
+    margin-top: 60px
+    border-radius: 20px
+    background-position: center center
+    margin-bottom: 30px
+    position: relative 
+#bannerImage::before
+    content: ''
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    background-color: rgba(0, 0, 0, 0.3) // Couleur de fond semi-transparente
+    border-radius: 20px
+
+@media screen and (max-width: 375px)
+    #bannerImage
+        width: 95%
