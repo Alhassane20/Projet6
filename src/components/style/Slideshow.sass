@@ -32,6 +32,15 @@ $main-color: #FF6060
   position: relative
   display: inline-block
 
+#img
+  width: 1240px
+  height: 415px
+
+.image-container img
+  object-fit: cover
+  height: 100%
+  width: 100%
+
 .image-container i 
   position: absolute
   top: 50%
@@ -129,6 +138,7 @@ $main-color: #FF6060
     padding: 15px
     font-size: 18px
     border-radius: 4px
+    transition: max-height 0.9s ease-in-out
     
 #responsive
   display: none

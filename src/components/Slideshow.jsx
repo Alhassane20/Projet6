@@ -657,11 +657,11 @@ function Slide({ title, pictures, description, name, picture, rating, ville, arr
             <div id='slideBlock'>
                 <div id="block-1">
                     <div id='pictures'>
-                    {pictures.map((imageUrl, index) => (
-                    <div key={index} className={`image-container ${index === imageIndex ? '' : 'autre-image'}`}>
-                    <img src={imageUrl} alt={`Image ${index + 1}`} />
-                    <i className="fa-solid fa-chevron-left flecheGauche" onClick={clicImagePrecedente}></i>
-                    <i className="fa-solid fa-chevron-right flecheDroite" onClick={clicImageSuivante}></i>
+                        {pictures.map((imageUrl, index) => (
+                        <div key={index} className={`image-container ${index === imageIndex ? '' : 'autre-image'}`}>
+                           <div id='img'> <img src={imageUrl} alt={`Image ${index + 1}`} /> </div>
+                            <i className="fa-solid fa-chevron-left flecheGauche" onClick={clicImagePrecedente}></i>
+                            <i className="fa-solid fa-chevron-right flecheDroite" onClick={clicImageSuivante}></i>
                 </div>
                 ))}
             </div>
