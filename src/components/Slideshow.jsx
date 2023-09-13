@@ -726,11 +726,11 @@ function Slide({ title, pictures, description, name, picture, rating, ville, arr
 
 function Rating(props) {
     return (<div id='etoiles'>
-       { (1 <= props.rating) ? <i class="fa-solid fa-star color-red"></i> : <i class="fa-solid fa-star color-grey"></i> }
-       { (2 <= props.rating) ? <i class="fa-solid fa-star color-red "></i> : <i class="fa-solid fa-star color-grey"></i> }
-       { (3 <= props.rating) ? <i class="fa-solid fa-star color-red"></i> : <i class="fa-solid fa-star color-grey"></i> }
-       { (4 <= props.rating) ? <i class="fa-solid fa-star color-red"></i> : <i class="fa-solid fa-star color-grey"></i> }
-       { (5 <= props.rating) ? <i class="fa-solid fa-star color-red"></i> : <i class="fa-solid fa-star color-grey"></i> }
+       { (1 <= props.rating) ? <i className="fa-solid fa-star color-red"></i> : <i className="fa-solid fa-star color-grey"></i> }
+       { (2 <= props.rating) ? <i className="fa-solid fa-star color-red "></i> : <i className="fa-solid fa-star color-grey"></i> }
+       { (3 <= props.rating) ? <i className="fa-solid fa-star color-red"></i> : <i className="fa-solid fa-star color-grey"></i> }
+       { (4 <= props.rating) ? <i className="fa-solid fa-star color-red"></i> : <i className="fa-solid fa-star color-grey"></i> }
+       { (5 <= props.rating) ? <i className="fa-solid fa-star color-red"></i> : <i className="fa-solid fa-star color-grey"></i> }
     </div>)
 
 }
