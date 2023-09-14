@@ -117,7 +117,7 @@ $main-color: #FF6060
 #descriptionBlock, #equipmentsBlock
   width: 45%
 
-#description, #equipments
+#description, #equipments 
     border-radius: 15px
     height: 40px
     display: flex
@@ -130,16 +130,18 @@ $main-color: #FF6060
     padding-top: 10px
     padding-bottom: 10px
     font-weight: 500
-#ParagrapheDescription, #ParagrapheEquipments
-    display: none
-    transition: 1s
+
+
+#ParagrapheDescription, #ParagrapheEquipments 
+    max-height: 0
+    overflow: hidden
+    transition: all 0.5s ease 0.5s
     background-color: #F6F6F6
     color: #FF6060
     margin: 0
-    padding: 15px
+    padding: 0px
     font-size: 18px
     border-radius: 4px
-    transition: display 1s
 
 #responsive
   display: none

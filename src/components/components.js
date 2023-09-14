@@ -12,7 +12,7 @@ export function collapseEvent(index) {
     }
   
     for (let i = 0; i < paragraphe.length; i++) {
-      paragraphe[i].style.display = i === index ? 'block' : 'none'; // le paragraphe apparait au clic sur l'icone up de la meme ligne, les autres paragraphes n'apparaissent pas
+      paragraphe[i].style.maxHeight = i === index ? '500px' : '0'; // le paragraphe apparait au clic sur l'icone up de la meme ligne, les autres paragraphes n'apparaissent pas
     }
   }
   // Parcourt les icones up, le paragraphe sur la meme ligne de l'icone selectionnée s'affiche et l'icone down apparait
@@ -24,46 +24,46 @@ export function collapseEvent(index) {
     down[index].style.display = 'none'; //L'icone down disparait au clic
     up[index].style.display = 'block'; // L'icone up réapparait au clic sur le bouton down
     paragraphe[index].style.display = 'none'; // Le paragraphe disparait au clic sur le bouton down
+    
   }
 // Ferme le paragraphe selectionné et affiche l'icone up
 
 export function openDescription() {
   let description = document.getElementById('ParagrapheDescription');
-  let upDescription = document.getElementById('upDescription')
-  let downDescription = document.getElementById('downDescription')
+  let upDescription = document.getElementById('upDescription');
+  let downDescription = document.getElementById('downDescription');
 
-  description.style.display = "block"
-  upDescription.style.display = "none"
-  downDescription.style.display = "block"
+  description.style.maxHeight = "500px";
+  upDescription.style.display = "none";
+  downDescription.style.display = "block";
 }
 
 export function closeDescription() {
   let description = document.getElementById('ParagrapheDescription');
-  let upDescription = document.getElementById('upDescription')
-  let downDescription = document.getElementById('downDescription')
+  let upDescription = document.getElementById('upDescription');
+  let downDescription = document.getElementById('downDescription');
 
-  description.style.display = "none"
-  upDescription.style.display = "block"
-  downDescription.style.display =" none"
+  description.style.maxHeight = "0";
+  upDescription.style.display = "block";
+  downDescription.style.display = "none";
 }
 
 export function openEquipments() {
   let equipments = document.getElementById('ParagrapheEquipments');
-  let upEquipments = document.getElementById('upEquipments')
-  let downEquipments = document.getElementById('downEquipments')
+  let upEquipments = document.getElementById('upEquipments');
+  let downEquipments = document.getElementById('downEquipments');
 
-  equipments.style.display = "block"
-  upEquipments.style.display = "none"
-  downEquipments.style.display = "block"
-
+  equipments.style.maxHeight = "500px";
+  upEquipments.style.display = "none";
+  downEquipments.style.display = "block";
 }
 
 export function closeEquipments() {
   let equipments = document.getElementById('ParagrapheEquipments');
-  let upEquipments = document.getElementById('upEquipments')
-  let downEquipments = document.getElementById('downEquipments')
+  let upEquipments = document.getElementById('upEquipments');
+  let downEquipments = document.getElementById('downEquipments');
 
-  equipments.style.display = "none"
-  upEquipments.style.display = "block"
-  downEquipments.style.display = "none"
+  equipments.style.maxHeight = "0";
+  upEquipments.style.display = "block";
+  downEquipments.style.display = "none";
 }
