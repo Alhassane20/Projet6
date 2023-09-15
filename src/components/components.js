@@ -12,7 +12,7 @@ export function collapseEvent(index) {
     }
   
     for (let i = 0; i < paragraphe.length; i++) {
-      paragraphe[i].style.maxHeight = i === index ? '500px' : '0'; // le paragraphe apparait au clic sur l'icone up de la meme ligne, les autres paragraphes n'apparaissent pas
+      paragraphe[i].style.maxHeight = i === index ? '1000px' : '0'; // le paragraphe apparait au clic sur l'icone up de la meme ligne, les autres paragraphes n'apparaissent pas
     }
   }
   // Parcourt les icones up, le paragraphe sur la meme ligne de l'icone selectionnée s'affiche et l'icone down apparait
