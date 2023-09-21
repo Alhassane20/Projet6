@@ -60,21 +60,27 @@ function Slide({ title, pictures, description, name, picture, rating, ville, arr
     const [countPicture,setCountPicture] = useState(1);
 
     const nextPicture = () => {
-        setCountPicture ((countPicture + 1) % pictures.length)
-    };
-    const backPicture = () => {
-        setCountPicture ((countPicture - 1) % pictures.length)
-    };
+        setCountPicture((countPicture % pictures.length) + 1);
+      };
+      
+      const backPicture = () => {
+        setCountPicture((countPicture - 1 + pictures.length) % pictures.length);
+      };
+      
         return (
             <div id='slideBlock'>
                 <div id="block-1">
-                    <div id='pictures'>
-                        {pictures.map((imageUrl, index) => (
-                        <div key={index} className={`image-container ${index === imageIndex ? '' : 'autre-image'}`}>
-        
-                           <div id='img'> <img src={imageUrl} alt={`Image ${index + 1}`} /> <p id='counterPicture'>{countPicture}/{pictures.length}</p> </div>
-                            <i className="fa-solid fa-chevron-left flecheGauche" onClick={()=> {clicImagePrecedente();backPicture()}}></i>
-                            <i className="fa-solid fa-chevron-right flecheDroite" onClick={()=> {clicImageSuivante();nextPicture()}}></i>
+                <div id='pictures'>
+                {pictures.map((imageUrl, index) => (
+                <div key={index} className={`image-container ${index === (countPicture - 1) ? '' : 'autre-image'}`}>
+                    <div id='img'> <img src={imageUrl} alt={`Image ${index + 1}`} /> </div>
+                    {(pictures.length > 1) && (
+                    <React.Fragment>
+                        <i className="fa-solid fa-chevron-left flecheGauche" onClick={backPicture}></i>
+                        <i className="fa-solid fa-chevron-right flecheDroite" onClick={nextPicture}></i>
+                        <p id='counterPicture'>{countPicture}/{pictures.length}</p>
+                    </React.Fragment>
+                    )}
                 </div>
                 ))}
             </div>
