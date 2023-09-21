@@ -34,6 +34,7 @@ export function openDescription() {
   let downDescription = document.getElementById('downDescription');
 
   description.style.maxHeight = "500px";
+  description.style.padding = "15px";
   upDescription.style.display = "none";
   downDescription.style.display = "block";
 }
@@ -44,6 +45,7 @@ export function closeDescription() {
   let downDescription = document.getElementById('downDescription');
 
   description.style.maxHeight = "0";
+  description.style.padding = "0";
   upDescription.style.display = "block";
   downDescription.style.display = "none";
 }
@@ -54,6 +56,7 @@ export function openEquipments() {
   let downEquipments = document.getElementById('downEquipments');
 
   equipments.style.maxHeight = "500px";
+  equipments.style.padding = "15px";
   upEquipments.style.display = "none";
   downEquipments.style.display = "block";
 }
@@ -64,6 +67,7 @@ export function closeEquipments() {
   let downEquipments = document.getElementById('downEquipments');
 
   equipments.style.maxHeight = "0";
+  equipments.style.padding = "0";
   upEquipments.style.display = "block";
   downEquipments.style.display = "none";
 }

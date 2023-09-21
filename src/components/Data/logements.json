@@ -1,3 +1,4 @@
+
 [
 	{
 		"id": "c67ab8a7",
@@ -617,8 +618,3 @@
 		]
 	}
 ]
-
-
-
-import data from '../../Data/logements.json';
-const selectedLogement = data.find((logement) => logement.id === id); //  on récupère le logement qui correspond à l'id de l'url
