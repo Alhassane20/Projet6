@@ -1,73 +1,46 @@
-export function collapseEvent(index) {
-    let paragraphe = document.getElementsByClassName('collapseParagraphe');
-    let down = document.getElementsByClassName('fa-angle-down');
-    let up = document.getElementsByClassName('fa-angle-up');
-  
-    for (let i = 0; i < down.length; i++) {
-      down[i].style.display = i === index ? 'block' : 'none'; // l'incone down apparait au clic sur l'icone up de la meme ligne, les trois autres icones down n'apparaissent pas
-    }
-  
-    for (let i = 0; i < up.length; i++) {
-      up[i].style.display = i === index ? 'none' : 'block'; // l'icone up disparait quand on clique dessus, les autres icones up ne disparaissent pas
-    }
-  
-    for (let i = 0; i < paragraphe.length; i++) {
-      paragraphe[i].style.maxHeight = i === index ? '1000px' : '0'; // le paragraphe apparait au clic sur l'icone up de la meme ligne, les autres paragraphes n'apparaissent pas
-    }
+export function toggleCollapse(index) {
+  let paragraphe = document.getElementsByClassName('collapseParagraphe');
+  let toggleCollapse = document.getElementById(`toggleCollapse${index}`);
+
+  if (paragraphe[index].style.maxHeight === "0px" || paragraphe[index].style.maxHeight === "") {
+    paragraphe[index].style.maxHeight = "500px"; // Ouvre le paragraphe
+    toggleCollapse.style.transform = "rotate(-180deg)";
+    paragraphe[index].style.padding = "15px"; // Ajoute le padding
+  } else {
+    paragraphe[index].style.maxHeight = "0px"; // Ferme le paragraphe
+    toggleCollapse.style.transform = "rotate(0deg)"; // Inverse la rotation vers le haut
+    paragraphe[index].style.padding = "0px"; // Retire le padding
   }
-  // Parcourt les icones up, le paragraphe sur la meme ligne de l'icone selectionnée s'affiche et l'icone down apparait
-  export function closeParagraphe(index) {
-    let paragraphe = document.getElementsByClassName('collapseParagraphe');
-    let down = document.getElementsByClassName('fa-angle-down');
-    let up = document.getElementsByClassName('fa-angle-up');
-  
-    down[index].style.display = 'none'; //L'icone down disparait au clic
-    up[index].style.display = 'block'; // L'icone up réapparait au clic sur le bouton down
-    paragraphe[index].style.display = 'none'; // Le paragraphe disparait au clic sur le bouton down
-    
+}
+
+
+export function toggleDescription() {
+  let description = document.getElementById('ParagrapheDescription');
+  let toggleDescription = document.getElementById('toggleDescription');
+
+  if (description.style.maxHeight === "0px" || description.style.maxHeight === "") {
+    description.style.maxHeight = "500px"; // Ouvre le paragraphe
+    toggleDescription.style.transform = "rotate(-180deg)"; // Rotation vers le bas
+    description.style.padding = "15px"; // Ajout de padding
+  } else {
+    description.style.maxHeight = "0px"; // Ferme le paragraphe
+    toggleDescription.style.transform = "rotate(0deg)"; // Rotation vers le haut
+    description.style.padding = "0"; // Ajout de padding
   }
-// Ferme le paragraphe selectionné et affiche l'icone up
-
-export function openDescription() {
-  let description = document.getElementById('ParagrapheDescription');
-  let upDescription = document.getElementById('upDescription');
-  let downDescription = document.getElementById('downDescription');
-
-  description.style.maxHeight = "500px";
-  description.style.padding = "15px";
-  upDescription.style.display = "none";
-  downDescription.style.display = "block";
 }
 
-export function closeDescription() {
-  let description = document.getElementById('ParagrapheDescription');
-  let upDescription = document.getElementById('upDescription');
-  let downDescription = document.getElementById('downDescription');
-
-  description.style.maxHeight = "0";
-  description.style.padding = "0";
-  upDescription.style.display = "block";
-  downDescription.style.display = "none";
-}
-
-export function openEquipments() {
+export function toggleEquipments() {
   let equipments = document.getElementById('ParagrapheEquipments');
-  let upEquipments = document.getElementById('upEquipments');
-  let downEquipments = document.getElementById('downEquipments');
+  let toggleEquipments = document.getElementById('toggleEquipments');
 
-  equipments.style.maxHeight = "500px";
-  equipments.style.padding = "15px";
-  upEquipments.style.display = "none";
-  downEquipments.style.display = "block";
+  if (equipments.style.maxHeight === "0px" || equipments.style.maxHeight === "") {
+    equipments.style.maxHeight = "500px"; // Ouvre le paragraphe
+    toggleEquipments.style.transform = "rotate(-180deg)"; // Rotation vers le bas
+    equipments.style.padding = "15px"; // Ajout de padding
+  } else {
+    equipments.style.maxHeight = "0px"; // Ferme le paragraphe
+    toggleEquipments.style.transform = "rotate(0deg)"; // Rotation vers le haut
+    equipments.style.padding = "0"; // Ajout de padding
+  }
 }
 
-export function closeEquipments() {
-  let equipments = document.getElementById('ParagrapheEquipments');
-  let upEquipments = document.getElementById('upEquipments');
-  let downEquipments = document.getElementById('downEquipments');
-
-  equipments.style.maxHeight = "0";
-  equipments.style.padding = "0";
-  upEquipments.style.display = "block";
-  downEquipments.style.display = "none";
-}

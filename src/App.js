@@ -8,6 +8,7 @@ import CardComponent from './components/Card.jsx'
 import Banner2 from './components/Banner2.jsx'
 import Collapse from './components/Collapse.jsx'
 import SlideComponent from './components/Slideshow.jsx';
+import CarrouselComponent from './components/Carrousel.jsx'
 
 
 function AppRouter() {
@@ -16,13 +17,13 @@ function AppRouter() {
     <Router>
         <Routes>
             <Route path='/' element={<Home />}/>
-            <Route path='logement' element={<Logement />}/>
             <Route path='*' element={<Error404 />}/>
             <Route path='about' element={<About />}/>
             <Route path="/logement/:id" element={<Slide />} />
-        </Routes>
-    </Router>
-    );
+
+            </Routes>
+            </Router>
+        );
 }
 
 function Home() {
@@ -40,22 +41,13 @@ function Slide() {
   return (
     <div>
       <Header />
+      <CarrouselComponent/>
       <SlideComponent />
       <Footer />
     </div>
   );
 };
 
-
-function Logement() {
-  return (
-    <div>
-      <Header />
-        <SlideComponent />
-      <Footer />
-    </div>
-  );
-};
 
 function Error404() {
   return (

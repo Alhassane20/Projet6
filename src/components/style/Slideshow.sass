@@ -1,7 +1,7 @@
 $main-color: #FF6060
  
 #slideBlock
-    margin-top: 70px
+    margin-top: 40px
     display: flex
     margin-left: auto
     margin-right: auto
@@ -17,57 +17,11 @@ $main-color: #FF6060
     margin-right: 120px
     margin-left: 100px
 
-/* Masquer toutes les images par défaut */
-#pictures .autre-image 
-  display: none
-
-#pictures
-    text-align: center
-    position: relative
-
-#block-1 
-  position: relative
-
-.image-container 
-  position: relative
-  display: inline-block
-
-#counterPicture
-  position: absolute
-  bottom: 10px
-  left: 50%
-  color: white
-
-#img
-  width: 1240px
-  height: 415px
-
-.image-container img
-  object-fit: cover
-  height: 100%
-  width: 100%
-
-.image-container i 
-  position: absolute
-  top: 50%
-  transform: translateY(-50%)
-  font-size: 24px
-  color: white
-  cursor: pointer
-
-.image-container i.flecheGauche 
-  left: 5px
-  font-size: 100px
-
-.image-container i.flecheDroite 
-  right: 5px
-  font-size: 100px
-
 #block-2
     display: flex
     justify-content: space-between
     height: 51px
-    margin-top: 25px
+    margin-top: 5px
 
 #block-2bis, #block-4bis
     display: flex
@@ -137,17 +91,12 @@ $main-color: #FF6060
 
 #description, #equipments, h1
   font-weight: 300
-
-#description i 
-  font-size: 32px
-
-#equipments i 
-  font-size: 32px
+  font-size: 20px
 
 #ParagrapheDescription, #ParagrapheEquipments 
     max-height: 0
     overflow: hidden
-    transition: all 0.5s ease 0.5s
+    transition: all 0.8s ease 0.5s
     background-color: #F6F6F6
     color: #FF6060
     margin: 0
@@ -155,23 +104,35 @@ $main-color: #FF6060
     font-size: 18px
     border-radius: 4px
 
-#upDescription,#downDescription,#upEquipments,#downEquipments
-  transition: all 0.5s ease 0.5s
+#description i, #equipments i 
+  font-size: 32px
 
-#responsive
-  display: none
+#ParagrapheDescription
+  max-height: 0
+  overflow: hidden
+
+.rotate
+  transition: transform 0.3s ease
+  transform: rotate(0deg)
 
 .color-grey
   color: gray 
 
+#ParagrapheEquipments
+  max-height: 0
+  overflow: hidden
+
+.rotate
+  transition: transform 0.9s ease
+  transform: rotate(0deg)
+
+#responsiveBis
+  display: none
+
+#ratingBis
+  display: none
+
 @media screen and (max-width: 375px)
-  #img
-    width: 335px
-    height: 255px
-
-  .image-container img
-    width: 90%
-
   #block-2, #block-3, #block-4, #block-5
     margin-right: 0
     margin-left: 20px
@@ -216,11 +177,3 @@ $main-color: #FF6060
   #description, #equipments
     padding: 5px
     font-size: 12px
-
-  .image-container i.flecheGauche 
-    font-size: 40px
-    left: 20px
-
-  .image-container i.flecheDroite 
-    font-size: 40px
-    right: 20px
