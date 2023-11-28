@@ -14,6 +14,7 @@ import CarrouselComponent from './components/Carrousel.jsx'
 function AppRouter() {
 
   return(
+    <BrowserRouter basename="/Projet8">
     <Router>
         <Routes>
             <Route path='/' element={<Home />}/>
@@ -23,6 +24,7 @@ function AppRouter() {
 
             </Routes>
             </Router>
+            </BrowserRouter>
         );
 }
 
