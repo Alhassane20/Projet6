@@ -14,8 +14,7 @@ import CarrouselComponent from './components/Carrousel.jsx'
 function AppRouter() {
 
   return(
-    <BrowserRouter basename="/Projet8">
-    <Router>
+    <Router basename="/Projet8">
         <Routes>
             <Route path='/' element={<Home />}/>
             <Route path='*' element={<Error404 />}/>
@@ -24,7 +23,6 @@ function AppRouter() {
 
             </Routes>
             </Router>
-            </BrowserRouter>
         );
 }
 
