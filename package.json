@@ -2,7 +2,7 @@
   "name": "kasa-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://alhassane20.github.io/Projet6",
+  "homepage": "https://Alhassane20.github.io/Projet6",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
