@@ -14,7 +14,7 @@ import CarrouselComponent from './components/Carrousel.jsx'
 function AppRouter() {
 
   return(
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router basename="/Projet6">
         <Routes>
             <Route path='/' element={<Home />}/>
             <Route path='*' element={<Error404 />}/>
