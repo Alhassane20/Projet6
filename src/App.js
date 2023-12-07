@@ -14,7 +14,7 @@ import CarrouselComponent from './components/Carrousel.jsx'
 function AppRouter() {
 
   return(
-    <Router basename="/Projet6">
+    <Router>
         <Routes>
             <Route path='/' element={<Home />}/>
             <Route path='*' element={<Error404 />}/>
